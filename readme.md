@@ -1,8 +1,8 @@
-<img src="https://github.com/kkamara/useful/blob/main/ReactJSNativeMobileAppBoilerplate.png?raw=true" alt="ReactJSNativeMobileAppBoilerplate.png" width=""/>
+<img src="https://github.com/kkamara/useful/blob/main/ReactNativeMobileAppBoilerplate.png?raw=true" alt="ReactNativeMobileAppBoilerplate.png" width=""/>
 
-# ReactJSNativeMobileAppBoilerplate
+# ReactNativeMobileAppBoilerplate
 
-(16-Aug-2024) TypeScript ReactJS Native Expo mobile app with file-based routing.
+(16-Aug-2024) TypeScript React Native Expo mobile app with file-based routing.
 
 * [Installation](#installation)
 
@@ -18,7 +18,7 @@
 
 * [NodeJS](https://nodejs.org/en)
 
-* [ReactJS Native Setup Virtual Mobile App](https://reactnative.dev/docs/environment-setup)
+* [React Native Setup Virtual Mobile App](https://reactnative.dev/docs/environment-setup)
 
 ```bash
 cp .env.example .env
@@ -33,11 +33,11 @@ yarn run android
 
 ## Misc
 
-This app was created with `npx create-expo-app ReactJSNativeMobileAppBoilerplate --template` command and choosing the `Navigation (TypeScript)` template. This can also be done with `npx create-expo-app ReactJSNativeMobileAppBoilerplate -t`.
+This app was created with `npx create-expo-app ReactNativeMobileAppBoilerplate --template` command and choosing the `Navigation (TypeScript)` template. This can also be done with `npx create-expo-app ReactNativeMobileAppBoilerplate -t`.
 
-[See ReactJS Native Mobile App Boilerplate](https://github.com/kkamara/ReactJSNativeMobileAppBoilerplate).
+[See React Native Mobile App Boilerplate](https://github.com/kkamara/ReactNativeMobileAppBoilerplate).
 
-[See NodeJS ReactJS Boilerplate](https://github.com/kkamara/nodejs-reactjs-boilerplate).
+[See NodeJS React Boilerplate](https://github.com/kkamara/nodejs-react-boilerplate).
 
 [See MRVL Desktop](https://github.com/kkamara/mrvl-desktop).
 
