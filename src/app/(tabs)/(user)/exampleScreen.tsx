@@ -50,21 +50,39 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Example Screen 1</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.innerContainer}>
-        <Text style={styles.title}>Example Screen 1</Text>
-        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
         {error && <Text style={[styles.text, styles.errorText]}>{error}</Text>}
-        <Text style={styles.text}>Welcome to Example Screen 1.</Text>
-        <Text style={styles.text}>
+        <Text
+          style={styles.text}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)"
+        >
+          Welcome to Example Screen 1.
+        </Text>
+        <Text
+          style={styles.text}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)"
+        >
           Click
           <Link href="/exampleScreen2" asChild>
             <ButtonOpacity text="here" />
           </Link>
           for Example Screen 2.
         </Text>
-        <Text style={styles.text}>Message from provider: {renderMessage()}</Text>
+        <Text
+          style={styles.text}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)"
+        >
+          Message from provider: {renderMessage()}
+        </Text>
         <Text
           style={[styles.text, styles.serverMessage]}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)"
         >
           Message from server:&nbsp;
           <Text style={styles.serverMessageText}>
@@ -81,15 +99,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginTop: 74,
   },
   innerContainer: {
-    alignItems: "flex-start",
+    alignItems: "center",
     width: "90%",
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   separator: {
@@ -98,7 +115,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   text: {
-    fontSize: 18,
+    fontSize: 17,
   },
   serverMessage: {
     width: 300,
