@@ -52,44 +52,42 @@ export default function TabOneScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Custom Screen 1</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <View style={styles.innerContainer}>
-        {error && <Text style={[styles.text, styles.errorText]}>{error}</Text>}
-        <Text
-          style={styles.text}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Welcome to Custom Screen 1.
+      {error && <Text style={[styles.text, styles.errorText]}>{error}</Text>}
+      <Text
+        style={styles.text}
+        lightColor="rgba(0,0,0,0.8)"
+        darkColor="rgba(255,255,255,0.8)"
+      >
+        Welcome to Custom Screen 1.
+      </Text>
+      <Text
+        style={styles.text}
+        lightColor="rgba(0,0,0,0.8)"
+        darkColor="rgba(255,255,255,0.8)"
+      >
+        Click
+        <Link href="/customScreen2" asChild>
+          <ButtonOpacity textStyle={styles.text} text="here" />
+        </Link>
+        for Custom Screen 2.
+      </Text>
+      <Text
+        style={styles.text}
+        lightColor="rgba(0,0,0,0.8)"
+        darkColor="rgba(255,255,255,0.8)"
+      >
+        Message from provider: {renderMessage()}
+      </Text>
+      <Text
+        style={[styles.text, styles.serverMessage]}
+        lightColor="rgba(0,0,0,0.8)"
+        darkColor="rgba(255,255,255,0.8)"
+      >
+        Message from server:&nbsp;
+        <Text style={styles.serverMessageText}>
+          {renderHelloFromServer()}
         </Text>
-        <Text
-          style={styles.text}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Click
-          <Link href="/customScreen2" asChild>
-            <ButtonOpacity textStyle={styles.text} text="here" />
-          </Link>
-          for Custom Screen 2.
-        </Text>
-        <Text
-          style={styles.text}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Message from provider: {renderMessage()}
-        </Text>
-        <Text
-          style={[styles.text, styles.serverMessage]}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)"
-        >
-          Message from server:&nbsp;
-          <Text style={styles.serverMessageText}>
-            {renderHelloFromServer()}
-          </Text>
-        </Text>
-      </View>
+      </Text>
     </View>
   );
 }
@@ -100,10 +98,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 74,
-  },
-  innerContainer: {
-    alignItems: "center",
-    width: "90%",
   },
   title: {
     fontSize: 20,
