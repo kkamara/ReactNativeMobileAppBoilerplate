@@ -66,7 +66,10 @@ export default function TabOneScreen() {
         <Text
           style={[styles.text, styles.serverMessage]}
         >
-          Message from server: {renderHelloFromServer()}
+          Message from server:&nbsp;
+          <Text style={styles.serverMessageText}>
+            {renderHelloFromServer()}
+          </Text>
         </Text>
       </View>
     </View>
@@ -103,5 +106,8 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     marginBottom: 10,
+  },
+  serverMessageText: {
+    color: 'red',
   },
 });
