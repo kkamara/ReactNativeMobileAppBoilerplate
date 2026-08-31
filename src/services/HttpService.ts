@@ -46,8 +46,8 @@ export default class HttpService
     }
     
     return axios.post<T, R>(
-      this.url+"/"+path, 
-      requestOptions.data, 
+      this.url+path,
+      requestOptions.data,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }
@@ -72,7 +72,7 @@ export default class HttpService
         );
       }
     }
-    let url = this.url+"/"+path;
+    let url = this.url+path;
     if (null !== path.match(/http/g)) {
       url = path;
     }
@@ -106,8 +106,8 @@ export default class HttpService
     }
     
     return axios.patch<T, R>(
-      this.url+"/"+path, 
-      requestOptions.data, 
+      this.url+path,
+      requestOptions.data,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }
@@ -134,7 +134,7 @@ export default class HttpService
     }
     
     return axios.delete<T, R>(
-      this.url+"/"+path, 
+      this.url+path,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }
