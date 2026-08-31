@@ -68,7 +68,7 @@ export default function TabOneScreen() {
         >
           Click
           <Link href="/customScreen2" asChild>
-            <ButtonOpacity text="here" />
+            <ButtonOpacity textStyle={styles.text} text="here" />
           </Link>
           for Custom Screen 2.
         </Text>
