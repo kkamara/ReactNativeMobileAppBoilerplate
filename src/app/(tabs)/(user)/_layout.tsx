@@ -6,14 +6,13 @@ export default function ExampleLayout() {
   return <HelloFromServerProvider>
     <Tabs backBehavior="history" screenOptions={{ tabBarStyle: { display: 'none', }, }}>
       <Tabs.Screen
-        name="exampleScreen"
+        name="customScreen"
         options={{
-          title: "Example",
           headerShown: false,
         }}
       />
       <Tabs.Screen
-        name="exampleScreen2"
+        name="customScreen2"
         options={{
           headerShown: false,
         }}

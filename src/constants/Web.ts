@@ -1,1 +1,1 @@
-export const webURL = process.env.EXPO_PUBLIC_NODEJS_BOILERPLATE_WEB_URL;
+export const webAPI = process.env.EXPO_PUBLIC_WEB_API;

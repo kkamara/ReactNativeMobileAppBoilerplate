@@ -1,4 +1,4 @@
-import { webURL, } from '@/constants/Web';
+import { webAPI, } from '@/constants/Web';
 import storage from '@/storage';
 import axios, { AxiosResponse, } from 'axios';
 
@@ -6,7 +6,7 @@ axios.defaults.withCredentials = true;
 
 export default class HttpService
 {
-  _domain = webURL;
+  _domain = webAPI;
   _url = `${this._domain}`;
   _timeout = 5000;
 
@@ -46,8 +46,8 @@ export default class HttpService
     }
     
     return axios.post<T, R>(
-      this.url+"/"+path, 
-      requestOptions.data, 
+      this.url+path,
+      requestOptions.data,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }
@@ -72,7 +72,7 @@ export default class HttpService
         );
       }
     }
-    let url = this.url+"/"+path;
+    let url = this.url+path;
     if (null !== path.match(/http/g)) {
       url = path;
     }
@@ -106,8 +106,8 @@ export default class HttpService
     }
     
     return axios.patch<T, R>(
-      this.url+"/"+path, 
-      requestOptions.data, 
+      this.url+path,
+      requestOptions.data,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }
@@ -134,7 +134,7 @@ export default class HttpService
     }
     
     return axios.delete<T, R>(
-      this.url+"/"+path, 
+      this.url+path,
       { headers: requestOptions.headers, timeout: this.timeout, },
     );
   }

@@ -10,7 +10,8 @@ export function ExternalLink(
     <Link
       target="_blank"
       {...props}
-      // @ts-expect-error: External URLs are not typed.
+      // This tells TypeScript to allow an external URL, such as https://example.com .
+      // @ts-expect-error: External URLs are not typed routes.
       href={props.href}
       onPress={(e) => {
         if (Platform.OS !== 'web') {
