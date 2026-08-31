@@ -1,4 +1,4 @@
-import { webURL, } from '@/constants/Web';
+import { webAPI, } from '@/constants/Web';
 import storage from '@/storage';
 import axios, { AxiosResponse, } from 'axios';
 
@@ -6,7 +6,7 @@ axios.defaults.withCredentials = true;
 
 export default class HttpService
 {
-  _domain = webURL;
+  _domain = webAPI;
   _url = `${this._domain}`;
   _timeout = 5000;
 
