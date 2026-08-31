@@ -28,7 +28,7 @@ yarn install
 ## Usage
 
 ```bash
-yarn run android
+yarn android
 ```
 
 ## Extra Details
