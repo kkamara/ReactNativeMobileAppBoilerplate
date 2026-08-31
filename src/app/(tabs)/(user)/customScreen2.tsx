@@ -30,36 +30,40 @@ export default function TabOneScreen() {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
-        <View style={styles.innerContainer}>
-          <Text style={styles.title}>Custom Screen 2</Text>
-          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-          <Text style={styles.text}>Welcome to Custom Screen 2.</Text>
-          <Text style={styles.text}>
-            Click
-            <Link href="/customScreen" asChild>
-              <ButtonOpacity text="here" />
-            </Link>
-            for Custom Screen 1.
-          </Text>
-          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-          <Text style={styles.text}>Enter your name:</Text>
-          <View style={styles.form}>
-            <TextInput
-              style={styles.textInput}
-              placeholder="Your Name"
-              keyboardType='default'
-              value={name}
-              onChangeText={handleNameChange}
-            />
-            <ButtonOpacity
-              style={styles.submitButton}
-              onPress={handleFormSubmit}
-              text="Submit"
-              special
-            />
-          </View>
+        <Text style={styles.title}>Custom Screen 2</Text>
+        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <Text style={styles.text}>Welcome to Custom Screen 2.</Text>
+        <Text style={styles.text}>
+          Click
+          <Link href="/customScreen" asChild>
+            <ButtonOpacity textStyle={styles.text} text="here" />
+          </Link>
+          for Custom Screen 1.
+        </Text>
+        <Text
+          style={[styles.text, styles.enterYourNameText]}
+        >
+          Enter your name:
+        </Text>
+        <View style={styles.form}>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Your Name"
+            keyboardType='default'
+            value={name}
+            onChangeText={handleNameChange}
+          />
+          <ButtonOpacity
+            textStyle={styles.text}
+            style={styles.submitButton}
+            onPress={handleFormSubmit}
+            text="Submit"
+            special
+          />
+        </View>
+        <View style={styles.finalNameContainer}>
           {finalName && (<Text
-            style={[styles.text, styles.finalText]}
+            style={[styles.text, styles.finalNameText]}
           >
             Hello, {finalName}!
           </Text>)}
@@ -74,15 +78,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
-  },
-  innerContainer: {
-    alignItems: "flex-start",
-    width: "90%",
+    marginTop: 166,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   separator: {
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   text: {
-    fontSize: 18,
+    fontSize: 17,
   },
   textInput: {
     height: 40,
@@ -103,15 +102,22 @@ const styles = StyleSheet.create({
   },
   form: {
     display: 'flex',
-    flexDirection: "row",
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    width: 250,
   },
   submitButton: {
     marginTop: 20,
   },
-  finalText: {
+  finalNameText: {
+    color: 'red',
+  },
+  finalNameContainer: {
+    minHeight: 40,
     marginTop: 20,
-    fontWeight: 'bold',
+  },
+  enterYourNameText: {
+    marginTop: 20,
   },
 });
