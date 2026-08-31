@@ -50,7 +50,7 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Example Screen 1</Text>
+      <Text style={styles.title}>Custom Screen 1</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.innerContainer}>
         {error && <Text style={[styles.text, styles.errorText]}>{error}</Text>}
@@ -59,7 +59,7 @@ export default function TabOneScreen() {
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)"
         >
-          Welcome to Example Screen 1.
+          Welcome to Custom Screen 1.
         </Text>
         <Text
           style={styles.text}
@@ -67,10 +67,10 @@ export default function TabOneScreen() {
           darkColor="rgba(255,255,255,0.8)"
         >
           Click
-          <Link href="/exampleScreen2" asChild>
+          <Link href="/customScreen2" asChild>
             <ButtonOpacity text="here" />
           </Link>
-          for Example Screen 2.
+          for Custom Screen 2.
         </Text>
         <Text
           style={styles.text}

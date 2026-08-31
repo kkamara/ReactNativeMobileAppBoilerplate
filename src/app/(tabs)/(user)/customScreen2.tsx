@@ -31,15 +31,15 @@ export default function TabOneScreen() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <View style={styles.innerContainer}>
-          <Text style={styles.title}>Example Screen 2</Text>
+          <Text style={styles.title}>Custom Screen 2</Text>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-          <Text style={styles.text}>Welcome to Example Screen 2.</Text>
+          <Text style={styles.text}>Welcome to Custom Screen 2.</Text>
           <Text style={styles.text}>
             Click
-            <Link href="/exampleScreen" asChild>
+            <Link href="/customScreen" asChild>
               <ButtonOpacity text="here" />
             </Link>
-            for Example Screen 1.
+            for Custom Screen 1.
           </Text>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
           <Text style={styles.text}>Enter your name:</Text>
