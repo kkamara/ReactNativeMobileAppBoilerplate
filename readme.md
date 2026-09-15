@@ -4,6 +4,8 @@
 
 (16-Aug-2024) TypeScript React Native Expo mobile app with file-based routing.
 
+This project is archived. There is an active alternative at https://github.com/kkamara/AuthenticationMobileApp
+
 * [Installation](#installation)
 
 * [Usage](#usage)
